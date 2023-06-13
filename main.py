@@ -62,6 +62,9 @@ async def on_message(message):
         else:
             response = "Account does not exist"
             await message.channel.send(response)
+    
+    elif message.content.startswith('d!troll'):
+        await message.channel.send("aaj jeetnge, kl jeetnge, parso jeetnge. Roz harte hai!!")
 
 @tasks.loop(hours=24)
 async def checkAllBans():
