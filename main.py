@@ -66,6 +66,10 @@ async def on_message(message):
     elif message.content.startswith('d!troll'):
         await message.channel.send("aaj jeetnge, kl jeetnge, parso jeetnge. Roz harte hai!!")
 
+    elif message.content.startswith('d!debug'):
+        println("req recieved")
+        await message.channel.send('debugging')
+
 @tasks.loop(hours=24)
 async def checkAllBans():
     channel_id = os.getenv("VAC_WATCH_CHANNEL_ID")
